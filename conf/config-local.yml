@@ -1,0 +1,5 @@
+Debug: true
+
+System:
+  EnableMysql: true
+  EnableRedis: false
