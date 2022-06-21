@@ -81,7 +81,8 @@ func initMySQL() (err error) {
 	}
 
 	logger := log.New()
-	logger.Level = log.DebugLevel           // miminum level
+	logger.Level = log.DebugLevel // miminum level
+	logger.SetReportCaller(true)
 	logger.Formatter = &log.TextFormatter{} // logrus automatically add time field
 	global.Conn.DB = sqldblogger.OpenDriver(
 		dsn,
